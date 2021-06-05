@@ -37,7 +37,9 @@ city* (Required)
 ```
 
 ##### Headers:
+```
 none
+```
 
 ##### Response
 ```
@@ -284,7 +286,7 @@ Authorization: {Access token}
 
 ### Menu
 #### Methods
-GET /booking/menu
+* GET /booking/menu
 #### Menu/GET
 ##### Path:
 ```
