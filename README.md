@@ -4,7 +4,7 @@ RESTful JSON API for Car Servicing Company using NodeJS, ExpressJS and Mongoose.
 
 ## Routes
 
-* User
+* [User](### Users)
 * Booking
 * Review
 * Service Center
