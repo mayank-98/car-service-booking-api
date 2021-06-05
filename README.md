@@ -5,17 +5,17 @@ RESTful JSON API for Car Servicing Company using NodeJS, ExpressJS and Mongoose.
 ## Routes
 
 * [User](#users)
-* Booking
-* Review
-* Service Center
-* Menu
+* [Booking](#booking)
+* [Reviews](#reviews)
+* [Service Center](#centers)
+* [Menu](#menu)
 
 ### Users
 #### Methods
-* POST /user/register
-* POST /user/login
-* GET /user/logout
-* GET /user/info
+* [POST](#userpost) /user/register
+* [POST](#userpost-1) /user/login
+* [GET](#userget) /user/logout
+* [GET](#userget-1) /user/info
 
 #### user/POST
 ##### Path:
@@ -104,7 +104,7 @@ none
 "Logged out"
 ```
 
-#### User/GET
+#### user/GET
 ##### Path:
 ```
 /user/info
@@ -142,10 +142,10 @@ Authorization: {Access Token}
 ```
 ### Booking
 #### Methods
-* GET /booking/
-* POST /booking/
-* PUT /booking/:id
-* DELETE /booking/:id
+* [GET](#bookingget) /booking/
+* [POST](#bookingpost) /booking/
+* [PUT](#bookingput) /booking/:id
+* [DELETE](#bookingdelete) /booking/:id
 
 #### Booking/GET
 ##### Path:
@@ -286,7 +286,7 @@ Authorization: {Access token}
 
 ### Menu
 #### Methods
-* GET /booking/menu
+* [GET](#menuget) /booking/menu
 #### Menu/GET
 ##### Path:
 ```
@@ -310,10 +310,10 @@ Authorization: {Access token}
 ```
 ### Centers
 #### Methods
-* GET /api/center
-* POST /api/center
-* PUT /api/center/:id
-* DELETE /api/center/:id
+* [GET](#centers-get) /api/center
+* [POST](#centers-post) /api/center
+* [PUT](#centers-put) /api/center/:id
+* [DELETE](#centers-delete) /api/center/:id
 
 #### Centers /GET
 ##### Path:
@@ -424,12 +424,12 @@ Update Complete
 ```
 ### Reviews
 #### Methods
-* GET /review/
-* POST /review/
-* DELETE /review/:id
-* PUT /review/:id
-* GET /review/all
-* DELETE /review/all
+* [GET](#reviews-get) /review/
+* [POST](#reviews-post) /review/
+* [DELETE](#reviews-delete) /review/:id
+* [PUT](#reviews-put) /review/:id
+* [GET](#reviews-get-1) /review/all
+* [DELETE](#reviews-delete-1) /review/all
 
 #### Reviews /GET
 ##### Path:
