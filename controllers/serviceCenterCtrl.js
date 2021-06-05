@@ -17,7 +17,7 @@ const serviceCenterCtrl = {
 
             const newCenter = new Center({ location, make, carname, model });
             await newCenter.save();
-            res.json({ msg: "Added a new service center" });
+            res.json({ msg: "New service center added" });
         } catch (err) {
             return res.status(500).json({ msg: err.message });
         }
@@ -25,7 +25,7 @@ const serviceCenterCtrl = {
     deleteServiceCenter: async (req, res) => {
         try {
             await Center.findByIdAndDelete(req.params.id);
-            res.json({ msg: "Deleted a service center" });
+            res.json({ msg: "Service center deleted" });
         } catch (err) {
             return res.status(500).json({ msg: err.message });
         }

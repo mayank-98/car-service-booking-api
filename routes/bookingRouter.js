@@ -10,5 +10,5 @@ router.route('/:id')
     .delete(auth, bookingCtrl.deleteBooking)
     .put(auth, bookingCtrl.updateBooking)
 
-router.get('/menu', bookingCtrl.getMenu)
+router.get('/menu', auth, bookingCtrl.getMenu)
 module.exports = router

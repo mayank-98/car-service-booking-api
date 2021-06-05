@@ -6,7 +6,7 @@ const bookingCtrl = {
     createBooking: async (req, res) => {
         try {
             const user = await Users.findById(req.user.id).select('name email');
-            if (!user) return res.status(400).json({ msg: "User does not exists" });
+            if (!user) return res.status(400).json({ msg: "User does not exist" });
 
             const { serviceDate, serviceLocation, nameOfCar, carModel, carMake, carClass, package } = req.body;
             const { _id, name, email } = user;
@@ -33,7 +33,7 @@ const bookingCtrl = {
     getBooking: async (req, res) => {
         try {
             const user = await Users.findById(req.user.id).select('name email');
-            if (!user) return res.status(400).json({ msg: "User does not exists" });
+            if (!user) return res.status(400).json({ msg: "User does not exist" });
 
             const f_booking = await Booking.find({ userID: user._id });
             res.json(f_booking);
@@ -55,7 +55,7 @@ const bookingCtrl = {
             const { serviceDate, nameOfCar, carModel, carMake, carClass, package } = req.body;
             const amount = calcAmount({ package, carClass });
             const newBooking = await Booking.findOneAndUpdate({ _id: req.params.id }, { serviceDate, nameOfCar, carModel, carMake, carClass, package, amount });
-            if (!newBooking) return res.status(400).json({ msg: "No such booking found" });
+            if (!newBooking) return res.status(400).json({ msg: "Booking not found" });
             res.json({ msg: `Booking Updated. New Amount: ${amount}.` });
         } catch (err) {
             return res.status(500).json({ msg: err.message });

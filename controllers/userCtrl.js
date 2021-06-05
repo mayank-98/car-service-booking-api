@@ -8,7 +8,7 @@ const userCtrl = {
             const { name, email, phone, password, city } = req.body;
             const user = await Users.findOne({ email });
 
-            if (user) return res.status(400).json({ msg: "This email already exists" });
+            if (user) return res.status(400).json({ msg: "This email already exist" });
             if (password.length < 6) return res.status(400).json({ msg: "Password should be atleast 6 characters long" });
             if (phone.length < 10) return res.status(400).json({ msg: "Phone number should be 10 digits" });
 
@@ -17,7 +17,7 @@ const userCtrl = {
                 name, email, phone, password: passwrodHash, city
             });
             await newUser.save();
-            res.json("done");
+            res.json("Succesfully Registered");
 
         } catch (err) {
             return res.status(500).json({ msg: err.message });
